@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 url = 'https://www.acueducto.com.co/wps/portal/EAB2/Home/atencion-al-usuario/programacion_cortes'
 api_key = 'AIzaSyDbvqxCdq01VBGy1YftdU37CFd69rj0mI0'
 
-direction = "Cra. 7 #32-43, Bogotá"
+direction = "Cra. 7 #33-43, Bogotá"
 lugar, barrio = sp.scrap_information(url)
 direcciones = nlp.busqueda(lugar)
 points = np.array([])
@@ -16,7 +16,7 @@ points = np.array([])
 for i in direcciones:
     if len(direcciones[i]):
         for nums in direcciones[i]:
-            temp = i + ' ' + nums + ', ' + barrio +', Fontibón'+', Bogotá'
+            temp = i + ' ' + nums  +', Bogotá'
             coords = dir.geocode_direction(temp, api_key)
             points = np.append(points, coords)
 
