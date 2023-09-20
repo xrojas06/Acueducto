@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 url = 'https://www.acueducto.com.co/wps/portal/EAB2/Home/atencion-al-usuario/programacion_cortes'
-api_key = 'AIzaSyDbvqxCdq01VBGy1YftdU37CFd69rj0mI0'
+api_key = 'Api_key'
 
 direction = "Cra. 7 #33-43, Bogotá"
 lugar, barrio = sp.scrap_information(url)
